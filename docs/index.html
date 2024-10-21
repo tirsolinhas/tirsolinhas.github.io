@@ -1,1 +1,184 @@
-Mon Oct 21 05:47:19 PM WEST 2024
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    /* Box sizing rules */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* Prevent font size inflation */
+    html {
+      -moz-text-size-adjust: none;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+
+    /* Remove default margin in favour of better control in authored CSS */
+    body, h1, h2, h3, h4, p,
+    figure, blockquote, dl, dd {
+      margin-block-end: 0;
+    }
+
+    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+    ul[role='list'],
+    ol[role='list'] {
+      list-style: none;
+    }
+
+    /* Set core body defaults */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    /* Set shorter line heights on headings and interactive elements */
+    h1, h2, h3, h4,
+    button, input, label {
+      line-height: 1.1;
+    }
+
+    /* Balance text wrapping on headings */
+    h1, h2,
+    h3, h4 {
+      text-wrap: balance;
+    }
+
+    /* A elements that don't have a class get default styles */
+    a:not([class]) {
+      text-decoration-skip-ink: auto;
+      color: currentColor;
+    }
+
+    /* Make images easier to work with */
+    img,
+    picture {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Inherit fonts for inputs and buttons */
+    input, button,
+    textarea, select {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    /* Make sure textareas without a rows attribute are not tiny */
+    textarea:not([rows]) {
+      min-height: 10em;
+    }
+
+    /* Anything that has been anchored to should have extra scroll margin */
+    :target {
+      scroll-margin-block: 5ex;
+    }
+
+    /* --- */
+
+    /* Container */
+    .row { display: flex; flex-direction: row;    }
+    .col { display: flex; flex-direction: column; }
+
+    /* Align */
+    .row.left,   .col.top    { justify-content: flex-start; }
+    .row.center, .col.middle { justify-content: center;     }
+    .row.right,  .col.bottom { justify-content: flex-end;   }
+    .row.top,    .col.left   { align-items: flex-start;     }
+    .row.middle, .col.center { align-items: center;         }
+    .row.bottom, .col.right  { align-items: flex-end;       }
+
+    /* Justify */
+    .row.between, .col.between { justify-content: space-between; }
+    .row.even,    .col.even    { justify-content: space-evenly;  }
+    .row.around,  .col.around  { justify-content: space-around;  }
+
+    /* --- */
+
+    body {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      background-color: rgb(241 245 249);
+      padding: 2em;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main {
+      width: 100%;
+      height: 550px;
+      background-image: url('main.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      color: white;
+      font-weight: bold;
+      padding: 0 2em;
+    }
+    .logo {
+      width: 300px;
+      margin-bottom: 3em;
+    }
+    .info {
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 1ex;
+      width: 100%;
+      color: #333;
+      max-width: 300px;
+      padding: 0.8em;
+      font-weight: semibold;
+    }
+    .footer {
+      margin-top: 1.5em;
+      color: rgb(148 163 184);
+    }
+    .item {
+      word-break: break-all;
+      font-size: 16px;
+      line-height: 1;
+      margin-bottom: 0.8em;
+    }
+    .item svg {
+      width: 16px;
+      min-width: 16px;
+      margin-right: 0.4em;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="main col middle center">
+      <img class="logo" src="logo.png" />
+      <div class="info">
+        <ul>
+          <li class="item row top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+            </svg>
+            <span>252 853 805</span>
+          </li>
+          <li class="item row top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+              <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+            </svg>
+            <a href="mailto:tirsolinhas@gmail.com">tirsolinhas@gmail.com</a>
+          </li>
+          <li class="item row top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+              <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+            </svg>
+            <a target="_blank" href="https://maps.app.goo.gl/9LF6XbdLp1zY2cwKA">R do Areal 380<br />4780-247 Santo Tirso</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer row center">
+      &copy; Tirsolinhas 2024
+    </div>
+  </body>
+</html>
